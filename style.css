@@ -1,0 +1,256 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.back-vid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h1 {
+    font-size: 28px;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #4acfee;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    min-height: 100vh;
+}
+
+.hero-info {
+    max-width: 600px;
+}
+
+.hero-info h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #4acfee;
+}
+
+.hero-info h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-info p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #4acfee;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.ul-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.ul-icons li {
+    list-style: none;
+}
+
+.ul-icons a {
+    color: #4acfee;
+    font-size: 24px;
+}
+
+/* Hero Image */
+.hero-img img {
+    width: 350px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Info cards section */
+.info-sec {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 10%;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid #4acfee;
+    border-bottom: 1px solid #4acfee;
+}
+
+.info-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #4acfee;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.info-card h1 {
+    font-size: 40px;
+    color: #4acfee;
+}
+
+.info-card p {
+    font-size: 16px;
+}
+
+/* Section styling */
+section {
+    padding: 60px 10%;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #4acfee;
+    border-left: 5px solid #4acfee;
+    padding-left: 15px;
+}
+
+.section-desc {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Cards (Projects) */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 0 10px #4acfee;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #4acfee;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Timeline (Education) */
+.timeline {
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+.timeline li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline li::before {
+    content: '•';
+    color: #4acfee;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Skills Bar */
+.skills-bar span {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.bar {
+    background: #222;
+    height: 15px;
+    border-radius: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.fill {
+    background: #4acfee;
+    height: 100%;
+    transition: width 1s ease-in-out;
+}
